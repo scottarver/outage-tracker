@@ -162,14 +162,14 @@ async function main() {
                 const oldv = oldp[k] as number;
                 if (newv > oldv) {
                     save = true;
-                    console.log(`Entergy ${p} '${k}' has gone up: from ${newv} to ${oldv} = ${newv - oldv} since ${formatDistance(
+                    console.log(`Entergy ${p} '${k}' has gone up: from ${oldv} to ${newv} = ${newv - oldv} since ${formatDistance(
                         oldp.timestamp,
                         new Date(),
                     )}`)
                 }
                 if (newv < oldv) {
                     save = true;
-                    console.log(`Entergy ${p} '${k}' has gone down from ${newv} to ${oldv} = ${oldv - newv} since ${formatDistance(
+                    console.log(`Entergy ${p} '${k}' has gone down from ${oldv} to ${newv} = ${oldv - newv} since ${formatDistance(
                         oldp.timestamp,
                         new Date(),
                     )}`)
@@ -234,7 +234,7 @@ async function main() {
                 }
                 if (newv < oldv) {
                     save = true;
-                    console.log(`Entergy ${locationstr} '${k}' has gone down from ${newv} to ${oldv} = ${oldv - newv} since ${formatDistance(
+                    console.log(`Entergy ${locationstr} '${k}' has gone down from ${oldv} to ${newv} = ${oldv - newv} since ${formatDistance(
                         oldp.timestamp,
                         new Date(),
                     )}`)
@@ -292,14 +292,14 @@ async function main() {
                 const oldv = _.get(oldp, k) as number;
                 if (newv > oldv) {
                     save = true;
-                    console.log(`Cleco ${locationstr} '${k}' has gone up: from ${newv} to ${oldv} = ${newv - oldv} since ${formatDistance(
+                    console.log(`Cleco ${locationstr} '${k}' has gone up: from ${oldv} to ${newv} = ${newv - oldv} since ${formatDistance(
                         new Date(oldp.desc.start_time),
                         new Date(),
                     )}`)
                 }
                 if (newv < oldv) {
                     save = true;
-                    console.log(`Cleco ${locationstr} '${k}' has gone down from ${newv} to ${oldv} = ${oldv - newv} since ${formatDistance(
+                    console.log(`Cleco ${locationstr} '${k}' has gone down from ${oldv} to ${newv} = ${oldv - newv} since ${formatDistance(
                         new Date(oldp.desc.start_time),
                         new Date(),
                     )}`)
