@@ -52,7 +52,7 @@ async function main() {
 
     const clecoUrl = 'https://kubra.io/data/f381ed0f-df33-47b0-acb9-defe90532987/public/thematic-3/thematic_areas.json'
     const clecoData:ClecoFileDatum[] = (await axios.get<ClecoData>(
-        entegyZipUrl)).data.file_data
+        clecoUrl)).data.file_data
 
 
     const datum = {
